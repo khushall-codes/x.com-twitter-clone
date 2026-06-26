@@ -1,272 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X.com Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  </head>
+  <body class="min-h-screen bg-slate-950 text-white">
+    <div class="mx-auto max-w-[1600px] px-4 py-6">
+      <div class="grid gap-4 lg:grid-cols-[280px_minmax(0,1fr)_320px]">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify clone</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-    <!-- Navbar -->
-    <nav>
-        <div class="left-half">
-            <div class="logo"><i class="fa-brands fa-spotify"></i></div>
-            <div class="home-icon"><i class="fa-solid fa-house"></i></div>
-            <div class="search-bar">
-                <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-                <input type="text" class="input-box" placeholder="What do you want to play?">
-                <div class="browse"><i class="fa-solid fa-folder-open"></i></div>
-            </div>
-        </div>
-        <div class="right-half">
-            <div class="right-half-p1">
-                <p class="nav-text">Premium</p>
-                <p class="nav-text">Support</p>
-                <p class="nav-text">Download</p>
-            </div>
-            <div class="right-half-p2">
-                <div class="nav-text"><i class="fa-regular fa-circle-down"></i> Install App</div>
-                <div class="nav-text">Sign up</div>
-                <button class="login-btn">Log in</button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main - left part -->
-    <div class="main">
-        <div class="main-left-part">
-            <div class="library">
-                <p>Your Library</p>
-                <div>+</div>
-            </div>
-
-            <div class="box-container">
-                <div class="box">
-                    <h4>Create your first playlist</h4>
-                    <p>It's easy we'll help you</p>
-                    <button>Create playlist</button>
+        <!-- Sidebar -->
+        <aside class="hidden lg:block">
+          <div class="sticky top-6 pr-2">
+            <div class="space-y-4 rounded-3xl border border-slate-800 bg-slate-900/70 p-5 text-slate-100 shadow-lg shadow-slate-950/20">
+              <div class="flex items-center gap-3 rounded-3xl bg-slate-800/80 p-4">
+                <div class="flex h-12 w-12 items-center justify-center rounded-3xl bg-amber-500 text-slate-950">
+                  <span class="material-symbols-outlined text-2xl">bolt</span>
                 </div>
-                <div class="box">
+                <div>
+                  <p class="text-sm uppercase tracking-[0.2em] text-slate-400">X.Clone</p>
+                  <h1 class="text-xl font-semibold">Explore</h1>
+                </div>
+              </div>
+              <nav class="space-y-2">
+                <a class="flex items-center gap-3 rounded-3xl px-4 py-3 text-lg font-semibold transition hover:bg-slate-800/80" href="#">
+                  <span class="material-symbols-outlined">home</span>
+                  Home
+                </a>
+                <a class="flex items-center gap-3 rounded-3xl px-4 py-3 text-lg font-semibold transition hover:bg-slate-800/80" href="#">
+                  <span class="material-symbols-outlined">notifications</span>
+                  Notifications
+                </a>
+                <a class="flex items-center gap-3 rounded-3xl px-4 py-3 text-lg font-semibold transition hover:bg-slate-800/80" href="#">
+                  <span class="material-symbols-outlined">search</span>
+                  Explore
+                </a>
+                <a class="flex items-center gap-3 rounded-3xl px-4 py-3 text-lg font-semibold transition hover:bg-slate-800/80" href="#">
+                  <span class="material-symbols-outlined">person</span>
+                  Following
+                </a>
+                <a class="flex items-center gap-3 rounded-3xl px-4 py-3 text-lg font-semibold transition hover:bg-slate-800/80" href="#">
+                  <span class="material-symbols-outlined">chat</span>
+                  Messages
+                </a>
+                <a class="flex items-center gap-3 rounded-3xl px-4 py-3 text-lg font-semibold transition hover:bg-slate-800/80" href="#">
+                  <span class="material-symbols-outlined">person_add</span>
+                  Profile
+                </a>
+                 <div class="button w-full text-center my-4">
+                            <button
+                                class="hidden md:block bg-[#1d9bf0] px-20 text-xl rounded-full py-3 text-white">Post</button>                             
+                           
+                             
+                        </div>
+              </nav>
+            </div>
+          </div>
+        </aside>
 
-                    <h4>Let's find some podcast to follow</h4>
-                    <p>We'll keep you updated on new updates</p>
-                    <button>Browse podcasts</button>
+        <!-- Main feed -->
+        <main class="space-y-4">
+          <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-5 shadow-lg shadow-slate-950/20">
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex-1 text-center text-lg font-semibold text-slate-100 sm:text-left">
+                <span class="inline-block rounded-full bg-slate-800 px-4 py-2">For you</span>
+                
+                <span class="ml-2 inline-block rounded-full bg-slate-800/80 px-4 py-2">Following</span>
+              </div>
+              <button class="rounded-full border border-slate-700 bg-slate-950/90 px-3 py-2 text-slate-100 transition hover:bg-slate-800">
+                <span class="material-symbols-outlined">settings</span>
+              </button>
+            </div>
+          </div>
 
+          <section class="rounded-3xl border border-slate-800 bg-slate-900/80 p-5 shadow-lg shadow-slate-950/20">
+            <div class="flex gap-4">
+              <img class="h-14 w-14 rounded-full object-cover" src="https://pbs.twimg.com/profile_images/1522060025854066688/IZs_lylH_bigger.png" alt="Profile" />
+              <div class="flex-1">
+                <textarea rows="4" class="w-full resize-none rounded-3xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-sky-500" placeholder="What’s happening?"></textarea>
+                <div class="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div class="flex flex-wrap items-center gap-3 text-sky-400">
+                    <span class="material-symbols-outlined cursor-pointer">image</span>
+                    <span class="material-symbols-outlined cursor-pointer">gif</span>
+                    <span class="material-symbols-outlined cursor-pointer">poll</span>
+                    <span class="material-symbols-outlined cursor-pointer">mood</span>
+                    <span class="material-symbols-outlined cursor-pointer">calendar_month</span>
+                    <span class="material-symbols-outlined cursor-pointer">pin_drop</span>
+                  </div>
+                  <button class="rounded-full bg-sky-500 px-6 py-2 font-semibold text-slate-950 transition hover:bg-sky-400">Post</button>
                 </div>
+              </div>
             </div>
-        </div>
-        <!-- Main: right part -->
+          </section>
 
-        <div class="main-right-part">
-            <div class="music-section">
-                <h2>popular song</h2>
-                <div class="songs">
-                   
-                    <div class="music-card">
-                        <img src="images/img 1.png" alt="Sad Hindi Melodies">
-                        <div class="music-play-btn"><i id="1" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Rockstar</div>
-                        <div class="img-discription">Jasleen Royal</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img2.png" alt="Sad Hindi Melodies">
-                        <div class="music-play-btn"><i id="2" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Sad Hindi Melodies</div>
-                        <div class="img-discription">Jasleen Royal</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img3.png" alt="Sad Hindi Melodies">
-                        <div class="music-play-btn"><i id="3" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Table No. 21 (Original Motion Picture Soundtrack)</div>
-                        <div class="img-discription">Jasleen Royal</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img4.png" alt="Sad Hindi Melodies">
-                        <div class="music-play-btn"><i id="4" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Table No. 21 (Original Motion Picture Soundtrack)</div>
-                        <div class="img-discription">Jasleen Royal</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img5.png" alt="Sad Hindi Melodies">
-                        <div class="music-play-btn"><i id="5" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Guru (Original Motion Picture Soundtrack)</div>
-                        <div class="img-discription">Jasleen Royal</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img6.png" alt="Sad Hindi Melodies">
-                        <div class="music-play-btn"><i id="6" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Sad Hindi Melodies</div>
-                        <div class="img-discription">Jasleen Royal</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img7.png" alt="Sad Hindi Melodies">
-                        <div class="music-play-btn"><i id="7" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Guru (Original Motion Picture Soundtrack)</div>
-                        <div class="img-discription">Jasleen Royal</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img8.png" alt="Sad Hindi Melodies">
-                        <div class="music-play-btn"><i id="8" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Tum Ho Toh (From "Saiyaara")</div>
-                        <div class="img-discription">Jasleen Royal</div>
-                    </div>
+          <section class="space-y-4">
+            <article class="rounded-3xl border border-slate-800 bg-slate-900/80 p-5 shadow-lg shadow-slate-950/10">
+              <div class="flex gap-4">
+                <img class="h-14 w-14 rounded-full object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80" alt="Elon Musk" />
+                <div class="flex-1">
+                  <div class="flex flex-wrap items-center gap-2 text-sm text-slate-400">
+                    <span class="font-semibold text-slate-100">Elon Musk</span>
+                    <span>@ElonMusk · 6h</span>
+                  </div>
+                  <p class="mt-3 text-slate-100">I spent $44 billion for this app and now Lizard boy just decided to hit copy and paste. It’s personal now. See you in the cage, Zuck.</p>
+                  <div class="mt-4 overflow-hidden rounded-3xl border border-slate-800">
+                    <img class="w-full object-cover" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="X feed image" />
+                  </div>
+                  <div class="mt-4 flex flex-wrap gap-3 text-sm text-slate-400">
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">chat_bubble</span> 1k</span>
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">repeat</span> 1k</span>
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">favorite</span> 1k</span>
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">bar_chart</span> 1k</span>
+                  </div>
                 </div>
-            </div>
-            <div class="music-section">
-                <h2>Recommended for today</h2>
-                <div class="songs">
-                    <div class="music-card">
-                        <img src="images/img5.png" alt="Sad Hindi Melodies">
-                        <div class="music-play-btn"><i id="9" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Finding Her (Female Version)</div>
-                        <div class="img-discription">Jasleen Royal</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img7.png" alt="Sad Hindi Melodies">
-                        <div class="music-play-btn"><i id="10" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Finding Her (Female Version)</div>
-                        <div class="img-discription">Tanishka Bahl</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img2.png" alt="">
-                        <div class="music-play-btn"><i id="11" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Rockstar</div>
-                        <div class="img-discription">Tanishka Bahl</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img8.png" alt="">
-                        <div class="music-play-btn"><i id="12" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Tum Ho Toh (From "Saiyaara")</div>
-                        <div class="img-discription">Tanishka Bahl</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img6.png" alt="">
-                        <div class="music-play-btn"><i id="13" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Guru (Original Motion Picture Soundtrack)</div>
-                        <div class="img-discription">Tanishka Bahl</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img4.png" alt="Sad Hindi Melodies">
-                        <div class="music-play-btn"><i id="14" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Sad Hindi Melodies</div>
-                        <div class="img-discription">Tanishka Bahl</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img 1.png" alt="Sad Hindi Melodies">
-                        <div class="music-play-btn"><i id="15" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Rockstar</div>
-                        <div class="img-discription">Tanishka Bahl</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img3.png" alt="Sad Hindi Melodies">
-                        <div class="music-play-btn"><i id="16" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Sad Hindi Melodies</div>
-                        <div class="img-discription">Tanishka Bahl</div>
-                    </div>
+              </div>
+            </article>
+
+            <article class="rounded-3xl border border-slate-800 bg-slate-900/80 p-5 shadow-lg shadow-slate-950/10">
+              <div class="flex gap-4">
+                <img class="h-14 w-14 rounded-full object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80" alt="CodeWithHarry" />
+                <div class="flex-1">
+                  <div class="flex flex-wrap items-center gap-2 text-sm text-slate-400">
+                    <span class="font-semibold text-slate-100">CodeWithHarry</span>
+                    <span>@CodeWithHarry · 6h</span>
+                  </div>
+                 <p class="mt-3 text-slate-100">Went expecting this to be SV ka Ctrl C + Ctrl V but tbh I got like 3 people killed on my couch cuz I needed more space so it’s way more of a fun watch than you think.</p> 
+                  <div class="mt-4 overflow-hidden rounded-3xl border border-slate-800">
+                    <img class="w-full object-cover" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1200&q=80" alt="Post image" />
+                  </div>
+                  <div class="mt-4 flex flex-wrap gap-3 text-sm text-slate-400">
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">chat_bubble</span> 1k</span>
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">repeat</span> 1k</span>
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">favorite</span> 1k</span>
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">bar_chart</span> 1k</span>
+                  </div>
                 </div>
-            </div>
-            <div class="music-section">
-                <h2>Popular albums and singles</h2>
-                <div class="songs">
-                    <div class="music-card">
-                        <img src="images/img10.png" alt="">
-                        <div class="music-play-btn"><i id="17" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Jhol - Acoustic</div>
-                        <div class="img-discription">Abdullah Siddiqui</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img11.png" alt="">
-                        <div class="music-play-btn"><i id="18" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Jhol - Acoustic</div>
-                        <div class="img-discription">Abdullah Siddiqui</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img9.png" alt="">
-                        <div class="music-play-btn"><i id="19" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Jhol - Acoustic</div>
-                        <div class="img-discription">Abdullah Siddiqui</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img12.png" alt="">
-                        <div class="music-play-btn"><i id="20" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Jhol - Acoustic</div>
-                        <div class="img-discription">Abdullah Siddiqui</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img3.png" alt="">
-                        <div class="music-play-btn"><i id="21" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Guru (Original Motion Picture Soundtrack)</div>
-                        <div class="img-discription">Abdullah Siddiqui</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img12.png" alt="">
-                        <div class="music-play-btn"><i id="22" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Tum Ho Toh (From "Saiyaara")</div>
-                        <div class="img-discription">Abdullah Siddiqui</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img10.png" alt="">
-                        <div class="music-play-btn"><i id="23" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Rockstar</div>
-                        <div class="img-discription">Abdullah Siddiqui</div>
-                    </div>
-                    <div class="music-card">
-                        <img src="images/img6.png" alt="">
-                        <div class="music-play-btn"><i id="24" class="playMusic fa-solid fa-circle-play"></i></div>
-                        <div class="img-title">Sad Hindi Melodies</div>
-                        <div class="img-discription">Abdullah Siddiqui</div>
-                    </div>
+              </div>
+            </article>
+            <article class="rounded-3xl border border-slate-800 bg-slate-900/80 p-5 shadow-lg shadow-slate-950/10">
+              <div class="flex gap-4">
+                <img class="h-14 w-14 rounded-full object-cover" src="https://pbs.twimg.com/profile_images/2035441086047629312/M3avmkFw_400x400.jpg" alt="X User" />
+                <div class="flex-1">
+                  <div class="flex flex-wrap items-center gap-2 text-sm text-slate-400">
+                    <span class="font-semibold text-slate-100">X User</span>
+                    <span>@xuser · 3h</span>
+                  </div>
+                  <p class="mt-3 text-slate-100">This is a matching mid section card with the same layout as the others. Keep scrolling to see more of the page content.</p>
+                  <img src="https://helios-i.mashable.com/imagery/articles/06NGXCrgZYj6900SjPhafh8/hero-image.fill.size_1248x702.v1727212335.jpg" alt="">
+                  <div class="mt-4 flex flex-wrap gap-3 text-sm text-slate-400">
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">chat_bubble</span> 482</span>
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">repeat</span> 310</span>
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">favorite</span> 2.4k</span>
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">bar_chart</span> 11k</span>
+                  </div>
                 </div>
+              </div>
+            </article>
+            <article class="rounded-3xl border border-slate-800 bg-slate-900/80 p-5 shadow-lg shadow-slate-950/10">
+              <div class="flex gap-4">
+                <img class="h-14 w-14 rounded-full object-cover" src="https://pbs.twimg.com/profile_images/1785725593054482433/WUidpvYw_400x400.jpg" alt="Jane Doe" />
+                <div class="flex-1">
+                  <div class="flex flex-wrap items-center gap-2 text-sm text-slate-400">
+                    <span class="font-semibold text-slate-100">Jane Doe</span>
+                    <span>@janedoe · 2h</span>
+                  </div>
+                  <p class="mt-3 text-slate-100">Here’s another post in the feed. The main feed now has more vertical content and gives the page a longer scroll.</p>
+                  <img src="https://assetsio.gnwcdn.com/Zenless-Zone-Zero-Jane-Doe-materials%2C-kit%2C-and-Mindscape-Cinema-cover.jpg?width=690&quality=85&format=jpg&auto=webp" alt="">
+                  <div class="mt-4 flex flex-wrap gap-3 text-sm text-slate-400">
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">chat_bubble</span> 710</span>
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">repeat</span> 224</span>
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">favorite</span> 1.8k</span>
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">bar_chart</span> 5.2k</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="rounded-3xl border border-slate-800 bg-slate-900/80 p-5 shadow-lg shadow-slate-950/10">
+              <div class="flex gap-4">
+                <img class="h-14 w-14 rounded-full object-cover" src="https://pbs.twimg.com/profile_images/1958851507463626755/r0L_Q5_4_400x400.jpg" alt="Daily News" />
+                <div class="flex-1">
+                  <div class="flex flex-wrap items-center gap-2 text-sm text-slate-400">
+                    <span class="font-semibold text-slate-100">Daily News</span>
+                    <span>@dailynews · 1h</span>
+                  </div>
+                  <p class="mt-3 text-slate-100">Breaking: the new X clone feed now scrolls further with extra posts added directly to the center column.</p>
+                  <img src="https://upload.wikimedia.org/wikipedia/en/9/9d/New_York_Daily_News_June_24_2021_cover.png" alt="">
+                  <div class="mt-4 flex flex-wrap gap-3 text-sm text-slate-400">
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">chat_bubble</span> 1.1k</span>
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">repeat</span> 950</span>
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">favorite</span> 3.3k</span>
+                    <span class="flex items-center gap-2 rounded-full bg-slate-950/80 px-3 py-2 transition hover:bg-slate-800/90"><span class="material-symbols-outlined">bar_chart</span> 19k</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+        </main>
+
+        <!-- Right panel -->
+        <aside class="hidden lg:block">
+          <div class="sticky top-6">
+            <div class="space-y-4">
+              <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-5 shadow-lg shadow-slate-950/20">
+                <label class="relative block">
+                  <span class="sr-only">Search</span>
+                  <input class="w-full rounded-full border border-slate-700 bg-slate-950/90 px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:border-sky-500 focus:outline-none" placeholder="Search" type="search" />
+                  <span class="material-symbols-outlined pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-slate-500">search</span>
+                </label>
+              </div>
+              <div class="rounded-3xl border border-slate-800 bg-slate-900/80 p-5 shadow-lg shadow-slate-950/20">
+                <h2 class="text-xl font-semibold text-slate-100">What’s happening</h2>
+                <div class="mt-4 space-y-3 text-sm text-slate-400">
+                  <div class="rounded-3xl bg-slate-950/80 p-4 transition hover:bg-slate-800/90">
+                    <p>Trending in India</p>
+                    <p class="mt-2 text-lg font-semibold text-white">#Orry</p>
+                    <p class="text-slate-500">40.2k posts</p>
+                  </div>
+                  <div class="rounded-3xl bg-slate-950/80 p-4 transition hover:bg-slate-800/90">
+                    <p>Trending in Tech</p>
+                    <p class="mt-2 text-lg font-semibold text-white">#TailwindCSS</p>
+                    <p class="text-slate-500">89.1k posts</p>
+                  </div>
+                  <div class="rounded-3xl bg-slate-950/80 p-4 transition hover:bg-slate-800/90">
+                    <p>Trending in Design</p>
+                    <p class="mt-2 text-lg font-semibold text-white">#WebDev</p>
+                    <p class="text-slate-500">26.9k posts</p>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-3xl border border-slate-800 bg-slate-900/80 p-5 shadow-lg shadow-slate-950/20">
+                <h2 class="text-xl font-semibold text-slate-100">Who to follow</h2>
+                <div class="mt-4 space-y-3">
+                  <div class="flex items-center justify-between rounded-3xl bg-slate-950/80 p-4 transition hover:bg-slate-800/90">
+                    <div>
+                      <p class="font-semibold text-white">Orry</p>
+                      <p class="text-sm text-slate-400">@orry_official</p>
+                    </div>
+                    <button class="rounded-full bg-sky-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-sky-400">Follow</button>
+                  </div>
+                  <div class="flex items-center justify-between rounded-3xl bg-slate-950/80 p-4 transition hover:bg-slate-800/90">
+                    <div>
+                      <p class="font-semibold text-white">Rohit Gupta</p>
+                      <p class="text-sm text-slate-400">@rohitgupta</p>
+                    </div>
+                    <button class="rounded-full bg-sky-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-sky-400">Follow</button>
+                  </div>
+                  <div class="flex items-center justify-between rounded-3xl bg-slate-950/80 p-4 transition hover:bg-slate-800/90">
+                    <div>
+                      <p class="font-semibold text-white">Utkarsh K</p>
+                      <p class="text-sm text-slate-400">@utk</p>
+                    </div>
+                    <button class="rounded-full bg-sky-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-sky-400">Follow</button>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
+        </aside>
+
+      </div>
     </div>
-
-    <!-- player-bar -->
-    <div class="player-bar">
-        <div class="now-bar">
-            <img src="images/img12.png" alt="">
-            <div>
-                <div class="img-title-info">Aashiqui 2</div>
-                <div class="img-des-info">This is description for title 1 song</div>
-            </div>
-
-        </div>
-        <div class="music-controller">
-            <div class="player">
-                <!-- <div id="shuffle"><i class="player-btns fa-solid fa-shuffle"></i></div>
-                <div id="backward"><i class="player-btns fa-solid fa-backward"></i></div>
-                <div id="play"><i class="player-btns fa-solid fa-circle-play"></i></div>
-                <div id="forward"><i class="player-btns fa-solid fa-forward"></i></div>
-                <div id="repeat"><i class="player-btns fa-solid fa-repeat"></i></div> -->
-                <!-- <div><i id="play" class="player-btns fa-solid fa-circle-play"></i></div> -->
-                <div><i id="shuffle" class="player-btns fa-solid fa-shuffle"></i></div>
-                <div><i id="backward" class="player-btns fa-solid fa-backward-step"></i></div>
-                <div><i id="play" class="player-btns fa-solid fa-circle-play"></i></div>
-                <div><i id="forward" class="player-btns fa-solid fa-forward-step"></i></div>
-                <div><i id="repeat" class="player-btns fa-solid fa-repeat"></i></div>
-
-
-            </div>
-
-            <div>
-                <input type="range" id="progressBar" value="0">
-            </div>
-        </div>
-
-    </div>
-    <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>
